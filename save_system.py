@@ -8,6 +8,7 @@ import os
 SAVE_FILE = "phase_dot_save.json"
 
 DEFAULT_SAVE = {
+    "level_difficulty": "basic",
     "unlocked_skins": [0],  # Start with first skin
     "high_score": 0,
     "recent_scores": []     # Store last 10 scores
@@ -42,3 +43,14 @@ def update_score(score):
     data["recent_scores"] = recent
     
     save_progress(data)
+
+def update_difficulty(current_difficulty):
+    """
+    Update the saved_difficulty if difficulty has changed.
+    """
+    data = load_save()
+
+    saved_difficulty = data.get("level_difficulty")
+    if (saved_difficulty != current_difficulty):
+        data["level_difficulty"] = current_difficulty
+    

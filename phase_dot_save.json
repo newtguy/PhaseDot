@@ -1,12 +1,19 @@
 {
+    "level_difficulty": "basic",
     "unlocked_skins": [
         0
     ],
-    "high_score": 4,
+    "high_score": 24,
     "recent_scores": [
-        3,
         0,
         2,
-        4
+        4,
+        11,
+        24,
+        4,
+        17,
+        9,
+        3,
+        7
     ]
 }
